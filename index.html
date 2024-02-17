@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador de texto</title>
+</head>
+<body>
+    <div id="container">
+        <header>
+            <img src="img/Logo.png" alt="Logo de Alura">
+        </header>
+        
+        <div class="left">
+            <div>
+                <textarea class="encryptedText" id="encryptedText" placeholder="Ingrese lo que desea encriptar" cols="30" rows="10"></textarea>
+            </div>
+        
+            <div class="warning">
+                <p><img src="img/exclamation-circle.png" alt="Icono de exclamación"> Solo letras minúsculas y sin acentos</p>
+            </div>
+        
+            <div class="buttons">
+                <button type="button" class="btnEncrypted" id="btnEncrypted">Encriptar</button>
+                <button type="button" class="btnDecrypted"  id="btnDecrypted">Desencriptar</button>
+            </div>
+        </div>
+
+        <div class="right">
+             <div class="hideAhead"> 
+                <img class="ryc" src="img/ryc.jpg" alt="dos personajes mirando papeles">
+                <h4>Ningún mensaje fue encontrado</h4>
+                <p class="textMessage">¡Ingrese el texto que desees encriptar o desencriptar!</p>
+                
+            </div>
+    
+            <div class="answer">
+                <p id="encryptedMessage"> Mensaje Encriptado:</p>
+                <textarea name="resultado" id="decryptedText" cols="30" rows="10"></textarea>
+                <button type="button" class="btnCopy" id="btnCopy">Copiar</button>
+            </div>
+        </div>
+    
+        <footer>© Gianella Quispe - 2024 </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

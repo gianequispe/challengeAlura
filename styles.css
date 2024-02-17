@@ -1,0 +1,231 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Work Sans', sans-serif;
+}
+
+body {
+    display: grid;
+    place-items: center;
+    height: 100vh; 
+    background-image: linear-gradient(205deg, #adc3e9 0, #dbe3ff 50%,  #fad6de 100%);
+}
+
+#container {
+    display: grid;
+    grid-template-areas: 'header header'
+                         'left right'
+                         'footer footer';
+    grid-template-rows: 10% auto 10% ;
+    padding: 5px;
+    gap: 10px;
+    
+}
+
+header {
+    grid-area: header;
+    text-align: left;
+    padding: 20px 0 5px 0; 
+}
+
+header img {
+    filter: invert(73%) sepia(35%) saturate(256%) hue-rotate(304deg) brightness(118%) contrast(96%); 
+}
+
+.left {
+    grid-area: left;
+    width: 500px;
+    text-align: center;
+}
+
+.encryptedText {
+    text-align: center;
+    padding: 15px;
+    width: 90%;
+    height: 300px;
+    margin-top: 30px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, .18);
+    background: linear-gradient(135deg, rgba(255, 255,255, .1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, .2);
+    resize: none; 
+}
+
+.warning {
+    text-align: left;
+    margin: 15px 0 7px 33px;
+}
+
+.warning img {
+    float: left;
+    margin-right: 5px;
+    filter: invert(7%) sepia(10%) saturate(45%) hue-rotate(301deg) brightness(81%) contrast(89%);
+}
+
+button {
+    width: 190px;
+    height: 50px;
+    border-radius: 20px;
+    text-align: center;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btnEncrypted, .btnDecrypted {
+    margin: 10px 8px;
+}
+
+.btnEncrypted {
+    background: #376aa8;
+}
+
+.btnEncrypted:hover{
+    box-shadow: 0 0 15px #3681AB,
+                0 0 25px #3681AB, 0 0 50px #3681AB;
+                transition: all .2s ease;
+}
+
+.btnDecrypted {
+    background: #989BBE;
+}
+
+.btnDecrypted:hover {
+    box-shadow: 0 0 15px #a8a6c5,
+    0 0 25px #a8a6c5, 0 0 50px #a8a6c5;
+    transition: all .2s ease;
+}
+
+.hideAhead, .answer {
+    width: 340px;
+    height: 505px;
+    text-align: center;
+    grid-area: right;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, .18);
+    background: linear-gradient(135deg, rgba(255, 255,255, .1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, .2);
+}
+
+.answer {
+    display: none; /*para que oculte el contenedor*/
+}
+
+.hideAhead img {
+    margin-top: 35px;
+    width: 80%;
+    border-radius: 5px;
+    box-shadow: 5px 8px 8px 0 rgba(77, 77, 77, 0.226); ;
+}
+
+h4 {
+    margin: 12px;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.textMessage {
+    font-size: 15px;
+    color: rgb(122, 121, 121);
+}
+
+.hideAhead textarea {
+    border: none;
+    background: none;
+}
+
+.answer p {
+    margin: 15px;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.answer textarea {
+    border: none;
+    background: none;
+    margin: 0 auto;
+    width: 80%;
+    height: 375px;
+}
+
+.btnCopy {
+    background: #ebb7d4; 
+    margin: 15px auto;
+}
+
+.btnCopy:hover {
+    box-shadow: 0 0 15px #fcbdd5,
+                0 0 25px #fcbdd5, 0 0 50px #fcbdd5;
+                transition: all .2s ease;
+}
+
+footer {
+    grid-area: footer; 
+    text-align: center;
+    margin-top: 1.5em;
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        height: 100%;
+        background-image: linear-gradient(205deg, #adc3e9 0, #dbe3ff   50%, #fad6de 100%);
+    }
+
+    #container {
+        grid-template-areas: 
+            'header'
+            'left'
+            'right'
+            'footer';
+        grid-template-rows: auto;
+        grid-template-columns: 1fr;
+    }
+
+    header{
+        text-align: center;
+    }
+
+    header img {
+        filter: invert(65%) sepia(25%) saturate(3087%) hue-rotate(181deg)brightness(60%) contrast(76%);
+    }
+
+    .left, .right {
+        width: 100%;
+        text-align: center;
+    }
+
+    .encryptedText, .hideAhead, .answer {
+        margin: 0 auto;
+        margin-top: 15px;
+    }
+
+    .encryptedText {
+        width: 85%;
+    }
+
+    .hideAhead, .answer {
+        width: 80%;
+        height: auto;
+    }
+
+    .warning {
+        text-align: left;
+        margin: 15px 0 7px 50px;
+    }
+    
+    .hideAhead img {
+        margin-top: 25px;
+        width: 80%;
+    }
+
+    .textMessage {
+        margin: 0 0 15px 0;
+    }
+
+    footer {
+        margin: 10px 0 20px 0;
+    }
+}
